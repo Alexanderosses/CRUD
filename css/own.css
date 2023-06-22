@@ -15,6 +15,7 @@
     --once: #C90000;
     --doce: #AEB6CD;
     --trece: #236D00;
+    --catorce: #910000;
 
 } 
 
@@ -27,6 +28,11 @@ a, li, ul{
     text-decoration: none;
     list-style: none;
 }
+
+p {
+    margin-top: 0;
+    margin-bottom: 0rem;
+  }
 
 
 /* BACKGROUND */
@@ -59,6 +65,12 @@ a, li, ul{
     background-color: rgba(255,255,255,.50);
 }
 
+.bg-new-user-table{
+    /*opacity: .2;*/
+    background-color: rgba(255,255,255,.90);
+    border-bottom: 1px solid #9b9191;;
+}
+
 /* BISEL REDONDO */
 .border-r-t{
     border-radius: 8px 8px 0 0;
@@ -66,6 +78,15 @@ a, li, ul{
 
 .border-r-b{
     border-radius: 0 0 8px 8px;
+}
+
+.border-r-l{
+    border-bottom: 1px solid #9b9191;
+    border-right: 1px solid #9b9191;
+}
+
+.border-r-l-2{
+    border-bottom: 1px solid #9b9191;
 }
 
 /* TEXTOS */
@@ -89,6 +110,24 @@ a, li, ul{
 }
 
 /* BOTON PRIMARIO */
+.boton-link-green{
+    color: var(--diez);
+    font-weight: 600;
+}
+
+.boton-link-green:hover{
+    color: var(--trece);
+}
+
+.boton-link-red{
+    color: var(--once);
+    font-weight: 600;
+}
+
+.boton-link-red:hover{
+    color: var(--catorce);
+}
+
 .boton-1{
     color: var(--seis);
     background-color: var(--diez);
