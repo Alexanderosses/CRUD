@@ -1,0 +1,267 @@
+/* CSS */
+
+/* VARIALBES COLORES */
+:root {
+    --uno: #000C18;
+    --dos: #000000;
+    --tres: #bcbcbc;
+    --cuatro: #c4c4c4;
+    --cinco: #cdcdcd;
+    --seis: #ffffff;
+    --siete: #F2F2F2;
+    --ocho: #ffa200;
+    --nueve: #001E39;
+    --diez: #38AF00;
+    --once: #C90000;
+    --doce: #AEB6CD;
+    --trece: #236D00;
+
+} 
+
+body{
+    width: 100% !important; 
+    font-family: 'Open Sans', sans-serif;
+}
+
+a, li, ul{
+    text-decoration: none;
+    list-style: none;
+}
+
+
+/* BACKGROUND */
+.bg-dark{
+    background-color: var(--dos) !important;
+}
+
+.b-blue{
+    background-color: var(--nueve);
+}
+.b-blue-light{
+    background-color: var(--doce);
+}
+.bg-img{
+    background-image: url(/img/AuraStudio3_LifestyleImage_904x560.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    /*width: 100vw;*/
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.bg-new-user{
+    /*opacity: .2;*/
+    background-color: rgba(255,255,255,.50);
+}
+
+/* BISEL REDONDO */
+.border-r-t{
+    border-radius: 8px 8px 0 0;
+}
+
+.border-r-b{
+    border-radius: 0 0 8px 8px;
+}
+
+/* TEXTOS */
+.t-text{
+    color: var(--seis);
+}
+
+.t-title{
+    color: var(--seis);
+    font-weight: bold;
+}
+
+.t-subtitle{
+    color: var(--seis);
+    font-weight: 100;
+    font-size: 1.5rem;
+}
+
+.navbar-toggler{
+    color: var(--seis)
+}
+
+/* BOTON PRIMARIO */
+.boton-1{
+    color: var(--seis);
+    background-color: var(--diez);
+    border: 2px solid #236D00;
+    width: 100%;
+    height: 100%;
+}
+
+.boton-1:hover{
+    color: var(--seis);
+    background-color: var(--trece);
+    border-color: var(--trece);
+}
+
+.boton-2{
+    color: var(--dos);
+    background-color:var(--seis);
+    border-color:var(--tres);    
+}
+.boton-2:hover{
+    color: var(--seis);
+    background-color:var(--dos);
+    border-color:var(--dos);    
+}
+
+/* HEADER */
+header{
+    background-color: var(--dos);
+    display: flex;
+    flex-direction: row;    
+    padding: 20px 0 20px;
+}
+
+.menu-header ul{
+    display: flex;
+    padding-bottom: 0px !important;
+}
+
+.menu-header ul li a{
+    color: var(--tres);
+    font-size: 1em;
+    cursor: pointer;
+    padding: 0 16px;
+}
+
+.menu-header ul li .activo{
+    color: var(--ocho) !important;
+    font-size: 1em;
+    cursor: none;
+    padding: 0 1rem;
+}
+
+.menu-header ul li a:hover{ 
+    color: #585858;
+}
+
+.logo-header {
+    height: 40px;
+}
+/* FIN HEADER */
+
+/* MEDIA PORTRAIT */
+@media (max-width: 575.98px) { 
+
+    /* ///// FOOTER ///// */
+    .menu-footer ul{
+        display: flex;
+        flex-direction: column !important;
+        padding: 0px !important;
+        text-align: center;
+    }
+    .menu-footer ul li{
+        padding: 5px;
+    }
+    .menu-footer ul li a{
+        color: var(--tres);
+        font-size: 1em;
+        cursor: pointer;
+        padding: 5px 0 !important;
+    }
+    .movil-a{
+        display: flex;
+        justify-content: center !important;
+        text-align: center;
+        padding: 10px 0;
+    }
+    .logo-footer{
+        height:45px !important;
+    } 
+
+    /* MENU */
+    .navbar-nav .nav-item .nav-link{
+        padding: 10px 0 !important;
+    }
+
+    .bi-list{
+        font-size: 32px;
+    }
+
+    .logo-header {
+        height: 30px !important;
+        margin: 10PX 10PX;
+    }
+ }
+/* ////////////////////// */
+
+
+/* FOOTER */
+footer{
+    background-color: var(--dos);
+}
+
+.menu-footer ul{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.menu-footer ul li a{
+    color: var(--tres);
+    font-size: 1em;
+    cursor: pointer;
+    padding: 0 1rem;
+}
+
+.menu-footer ul li a:hover{
+    color: #585858;
+}
+
+address{
+    margin: 0px;
+}
+
+address p{
+    font-size: small;
+    color: var(--cuatro);
+    padding-bottom: 10px;
+}
+
+.logo-footer {
+    height: 25px;
+}
+
+.logo-rrss{
+    height: 25px;
+    border-radius: 12px;
+}
+.logo-rrss:hover{
+    -webkit-box-shadow: 0px 0px 15px 0px rgba(255,255,255,1);
+    -moz-box-shadow: 0px 0px 15px 0px rgba(255,255,255,1);
+    box-shadow: 0px 0px 15px 0px rgba(255,255,255,1);
+    cursor: pointer;
+}
+/* FIN FOOTER */
+
+/* FORMULARIO */
+.form-control,
+.form-select{
+    border: 1px solid var(--siete) !important;
+    background-color: var(--seis) !important;
+    color: var(--nueve);
+    line-height: 1.4rem;
+}
+option{
+    line-height: 2rem;
+}
+.form-control:focus{
+    color: var(--nueve) !important;
+    background-color: var(--siete);
+    border: 1px solid var(--doce);
+}
+
+.form-control::placeholder{
+    color: var(--doce) !important;
+}
+
