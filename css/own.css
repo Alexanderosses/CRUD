@@ -27,6 +27,7 @@ body{
 a, li, ul{
     text-decoration: none;
     list-style: none;
+    padding-left: 0px !important;
 }
 
 p {
@@ -49,7 +50,7 @@ p {
 .bg-img{
     background-image: url(/img/AuraStudio3_LifestyleImage_904x560.jpg);
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: top center;
     background-size: cover;
     background-attachment: fixed;
     /*width: 100vw;*/
@@ -302,5 +303,16 @@ option{
 
 .form-control::placeholder{
     color: var(--doce) !important;
+}
+
+.tabla{
+    max-height: 300px;
+    min-height: 0px !important;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.tabla p{
+    padding: 0 0px 0 15px;
 }
 
