@@ -79,16 +79,16 @@
                         <div class="col-md-12 bg-new-user p-3 border-r-b">
                             <div class="row g-3 justify-content-center">
                                 <div class="col-sm-12 col-md">
-                                    <input type="text" class="form-control" placeholder="Nombre" id="firstName"/>
+                                    <input type="text" class="form-control" placeholder="Nombre" id="firstName" required/>
                                 </div>                                
                                 <div class="col-sm-12 col-md">
-                                    <input type="text" class="form-control" placeholder="Apellido" id="lastName"/>
+                                    <input type="text" class="form-control" placeholder="Apellido" id="lastName" required/>
                                 </div>
                                 <div class="col-sm-12 col-md">
-                                    <input type="text" class="form-control" placeholder="Email" id="email"/>
+                                    <input type="email" class="form-control" placeholder="Email" id="email" required/>
                                 </div>
                                 <div class="col-sm-12 col-md">
-                                    <select class="form-select" aria-label="Seleccione" id="profile">                                        
+                                    <select class="form-select" aria-label="Seleccione" id="profile" required>                                        
                                         <option value="" hidden>Seleccione Perfil</option>
                                         <option value="suscriptor">Suscriptor</option>
                                         <option value="editor">Editor</option>
@@ -133,8 +133,7 @@
                         </div>
                         <!-- TABLE -->
                         <div class="tabla">
-                            <ul class="col-md-12" id="respuesta">
-                            </ul>
+                            <div class="col-md-12" id="respuesta"></div>
                         </div>                        
                     </section>
                 </div>                

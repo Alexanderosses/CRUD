@@ -14,9 +14,9 @@ function agregarUsuario(){
           })
     }
 
-    const respuesta = document.getElementById('respuesta');
-    const lista = document.createElement('li');
-    lista.innerHTML = 
+    const respuesta = document.getElementById('respuesta'); // capturamos el elemento por ID
+    const lista = document.createElement('div'); // creamos el elemento contenedor
+    lista.innerHTML = // creamos el elemento html con template stream
     `<div class="row bg-new-user-table g-0" id="fila">
         <div class="col-sm-12 col-md-2 g-0">
             <p class="py-2">${nombre}</p>
@@ -35,13 +35,12 @@ function agregarUsuario(){
             <button type="button" class="btn btn-link boton-link-green">Editar</button>
         </div>
     </div>`;           
-    respuesta.appendChild(lista);
-    
-
+    respuesta.appendChild(lista); // sumamos el elemento al contenedor DIV creado
 }
 
+/* FUNCION PARA BORRAR UNA FILA */
 function borrar() {
-    var node = document.getElementById("fila");
+    let node = document.getElementById("fila");
     node.parentNode.removeChild(node);
 }
 
