@@ -49,7 +49,7 @@ p {
     background-color: var(--doce);
 }
 .bg-img{
-    background-image: url(/img/AuraStudio3_LifestyleImage_904x560.jpg);
+    background-image: url(https://alexanderosses.github.io/CRUD/img/AuraStudio3_LifestyleImage_904x560.jpg);
     background-repeat: no-repeat;
     background-position: top center;
     background-size: cover;
