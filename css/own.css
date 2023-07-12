@@ -200,6 +200,14 @@ header{
 
 /* MEDIA PORTRAIT */
 @media (max-width: 575.98px) { 
+    #respuesta{
+        overflow-y: auto;
+    }
+
+    #resp{
+        background-color: #ffffff !important;
+    }
+
 
     /* ///// FOOTER ///// */
     .menu-footer ul{

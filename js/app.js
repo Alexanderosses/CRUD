@@ -17,24 +17,25 @@ function showData() {
     }
     let html = "";
     usersList.forEach((user, index) => {
-        html += `<div class="row bg-new-user-table g-0" id="fila">
-        <div class="col-sm-12 col-md-2 g-0">
-            <p class="py-2">${user.firstName}</p>
-        </div>
-        <div class="col-sm-12 col-md-2 g-0">
-            <p class="py-2">${user.lastName}</p>
-        </div>
-        <div class="col-sm-12 col-md g-0">
-            <p class="py-2">${user.email}</p>
-        </div>
-        <div class="col-sm-12 col-md-2 g-0">
-            <p class="py-2">${user.profile}</p>
-        </div>
-        <div class="col-sm-12 col-md-2 g-0 text-center">
-            <button type="button" class="btn btn-link boton-link-red" onclick="deleteData(${index})">Borrar</button>
-            <button type="button" class="btn btn-link boton-link-green" onclick="editData(${index})">Editar</button>
-        </div>
-    </div>`
+        html += `
+        <div class="row bg-new-user-table g-0" id="fila">
+            <div class="col-sm-12 col-md-2 col-12 g-0">
+                <p class="py-2">${user.firstName}</p>
+            </div>
+            <div class="col-sm-12 col-md-2 col-12 g-0">
+                <p class="py-2">${user.lastName}</p>
+            </div>
+            <div class="col-sm-12 col-md col-12 g-0">
+                <p class="py-2">${user.email}</p>
+            </div>
+            <div class="col-sm-12 col-md-2 col-12 g-0">
+                <p class="py-2">${user.profile}</p>
+            </div>
+            <div class="col-sm-12 col-md-2 col-12 g-0 text-md-center">
+                <button type="button" class="btn btn-link boton-link-red" onclick="deleteDataPrev(${index})"> <i class="bi bi-trash3"></i></button>
+                <button type="button" class="btn btn-link boton-link-green" onclick="editData(${index})">Editar <i class="bi bi-pencil"></i> </button>
+            </div>
+        </div>`
     });
     document.querySelector('#respuesta').innerHTML = html;
 }
@@ -73,6 +74,8 @@ function addData(event) {
 function editData(index) {
     document.getElementById('add-btn').style.display = 'none';
     document.getElementById('edit-btn').style.display = 'block';
+    document.getElementById('edit-btn').style.backgroundColor = '#ffa200';
+    document.getElementById('edit-btn').style.borderColor = '#ffa200';
 
     let usersList;
     if (localStorage.getItem("usersList") === null) {
@@ -104,11 +107,16 @@ function editData(index) {
 }
 
 // deleteData
-function deleteData(index) {     
+function deleteDataPrev(){
+    if (window.confirm("Realmente quieres borrar el item?")) 
+    deleteData();
+}
+
+function deleteData(index) {  
     let usersList;
     if (localStorage.getItem("usersList") === null) {
         usersList = []
-    } else {
+    }  else {
         usersList = JSON.parse(localStorage.getItem("usersList"))
     }
     usersList.splice(index, 1);
@@ -117,6 +125,8 @@ function deleteData(index) {
     let node = document.querySelector("#fila");
     node.parentNode.removeChild(node);
 }
+
+// recargamos nuevamente la tabla
 showData();
 
 
