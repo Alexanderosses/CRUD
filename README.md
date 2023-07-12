@@ -14,3 +14,5 @@ A continuación, determinamos las características del proyecto:
 ////////////////////////////////////////////////////////////////////////////////////
 
 Se incluye wireframe en alta. wireframe.jpg
+El protitpo esta diseñado en FIGMA URL: 
+https://www.figma.com/file/j6cnClJBnivIYtOfiJlW8W/LANDING-PROYECTOS-1-UDD?type=design&node-id=79%3A42&mode=design&t=Q6HlbP7nZW8QVfVv-1
